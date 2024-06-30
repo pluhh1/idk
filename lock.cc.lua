@@ -497,7 +497,8 @@ CombinedDisplay.Visible = getgenv().ShowDisplay -- Set visibility based on getge
 
 -- Function to update the Ping and Prediction Display
 local function updateDisplay()
-        if Settings.pluh.Display == true 
+while true do
+        if Settings.pluh.Display
             local ping = math.floor(game:GetService("Stats").Network.ServerStatsItem["Data Ping"]:GetValue())
             CombinedDisplay.Text = "Ping: " .. tostring(ping) .. " | Prediction: " .. tostring(PredictionValue)
             CombinedDisplay.Visible = true -- Ensure it's visible when ShowDisplay is true
