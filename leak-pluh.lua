@@ -13,6 +13,14 @@ local isMouseEnabled = UserInputService.MouseEnabled
 local isKeyboardEnabled = UserInputService.KeyboardEnabled
 local isGamepadEnabled = UserInputService.GamepadEnabled
 
+function Notify(tx)	
+    SG:SetCore("SendNotification", {	
+        Title = "Notification",	
+        Text = tx,	
+Duration = 5	
+    })	
+end	
+
 local Settings = {   
     pluh = {
         Enabled = true,
