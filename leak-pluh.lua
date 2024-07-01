@@ -21,7 +21,8 @@ local Settings = {
         AIRSHOT = true,
         NOTIF = true,           
         Display = true,
-        AUTOPRED = true,           
+        AUTOPRED = true,       
+        Smoothness = 0.19,
         FOV = math.huge, -- Don't touch this
     }
 }
@@ -597,8 +598,7 @@ Notify({
 })
 
 -- Camera lock logic
-getgenv().Pred = 0.18838199387878881118
-getgenv().Smoothness = 0.5
+getgenv().Pred = 0.290
 
 RunService.Heartbeat:Connect(function()
     if enabled and Plr then
@@ -607,7 +607,7 @@ RunService.Heartbeat:Connect(function()
             local targetPosition = Plr.Position + Plr.Velocity * getgenv().Pred
             local currentCFrame = camera.CFrame
             local targetCFrame = CFrame.new(currentCFrame.p, targetPosition)
-            local smoothness = getgenv().Smoothness or 0.5
+            local smoothness = Settings.pluh.Smoothness or 0.5
 
             camera.CFrame = currentCFrame:Lerp(targetCFrame, smoothness)
         end
