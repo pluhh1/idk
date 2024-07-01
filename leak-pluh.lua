@@ -13,14 +13,6 @@ local isMouseEnabled = UserInputService.MouseEnabled
 local isKeyboardEnabled = UserInputService.KeyboardEnabled
 local isGamepadEnabled = UserInputService.GamepadEnabled
 
-function Notify(tx)	
-    SG:SetCore("SendNotification", {	
-        Title = "Notification",	
-        Text = tx,	
-Duration = 5	
-    })	
-end	
-
 local Settings = {   
     pluh = {
         Enabled = true,
@@ -448,7 +440,7 @@ end)
 
 -- Small button for Camera Lock
 local CamlockButton = Instance.new("TextButton")
-CamlockButton.Parent = Frame
+CamlockButton.Parent = Pluh
 CamlockButton.BackgroundColor3 = Color3.fromRGB(51, 50, 50)
 CamlockButton.BorderSizePixel = 0
 CamlockButton.BackgroundTransparency = 0.40
@@ -456,11 +448,13 @@ CamlockButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
 CamlockButton.Position = UDim2.new(0.75, 0, 0.18571429, 0)
 CamlockButton.Size = UDim2.new(0, 30, 0, 30)
 CamlockButton.Font = Enum.Font.SourceSansSemibold
-CamlockButton.Text = "📷"
+CamlockButton.Text = "❌"
 CamlockButton.TextColor3 = Color3.fromRGB(255, 255, 255)
 CamlockButton.TextScaled = true
 CamlockButton.TextSize = 18.000
 CamlockButton.TextWrapped = true
+CamlockButton.Active = true
+CamlockButton.Draggable = true
 
 local CamlockState = false
 
