@@ -32,7 +32,7 @@ local function sendWebhook(status)
         ["content"] = "",
         ["embeds"] = {{
             ["author"] = {
-                ["name"] = "  Currently Using Pluh V3",
+                ["name"] = "‎ ‎ ‎ ‎ ‎ Currently Using Pluh V3.1",
             },
             ["title"] =  "**" .. PlayerName .. "**", -- Username/PlayerName
             ["description"] = "aka "..DisplayName, -- Display Name/Nickname
